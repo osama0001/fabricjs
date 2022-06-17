@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FabricJs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="canvas_tools">
+
+          <button class="canvas_tools-buttons">
+            <input type="file" id="upload_image">
+            <div class="button_icon">
+              <em class="fa-solid fa-image"></em>
+            </div>
+            <div class="button_text">Add Images</div>
+          </button>
+          <button class="canvas_tools-buttons add_text">
+            <div class="button_icon">
+              <em class="fa-solid fa-text-height"></em>
+            </div>
+            <div class="button_text">Add Text</div>
+          </button>
+        </div>
+        <div class="canvas_container">
+            <div class="drawing_area">
+                <canvas id="canvas"> </canvas>
+            </div>
+          <img src="images/background_tshirt.png" alt="" />
+        </div>
+      </div>
+    </main>
+    <script src="fabric.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

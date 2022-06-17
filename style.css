@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+@media only screen and (max-width: 40em) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+
+
+.canvas_tools {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 40em) {
+  .canvas_tools {
+    flex-direction: row;
+    order:  1;
+  }
+}
+
+button {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  margin-top: 8px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+
+}
+
+@media only screen and (max-width: 40em) {
+  button {
+    margin-right: 8px;
+  }
+}
+
+button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+button:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+button:-webkit-details-marker {
+  display: none;
+}
+
+button input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  width: -moz-available;
+  height: -moz-available;
+  cursor: pointer;
+}
+
+.button_icon {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  line-height: 0;
+  margin: auto;
+  transition: background-color 0.2s ease-out;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.canvas_container {
+  border: thin red solid;
+  position: relative;
+}
+
+.drawing_area {
+	top: 100px;
+    left: 120px;
+	width: 200px;
+	height: 400px;
+	position: absolute;
+	border: #99a199 solid;
+}
+
+
