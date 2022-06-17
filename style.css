@@ -183,6 +183,7 @@ body {
 .canvas_container {
   border: thin red solid;
   position: relative;
+  align-self: center;
 }
 
 .drawing_area {
@@ -192,4 +193,9 @@ body {
   height: 400px;
   position: absolute;
   border: #99a199 solid;
+}
+
+.canvans_image {
+  max-height:100%; 
+  max-width:100%;
 }
