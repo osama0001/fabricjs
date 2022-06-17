@@ -45,7 +45,7 @@ var deleteIcon = "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F
   img.src = deleteIcon;
 
   fabric.Object.prototype.transparentCorners = false;
-  fabric.Object.prototype.cornerColor = 'blue';
+  fabric.Object.prototype.cornerColor = '#04AA6D';
   fabric.Object.prototype.cornerStyle = 'circle';
 
   fabric.Object.prototype.controls.deleteControl = new fabric.Control({
@@ -77,7 +77,7 @@ var deleteIcon = "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F
 
 
 
-// Zoom in and out feature
+// Zoom in and out with mouse feature
 
 canvas.on('mouse:wheel', function(opt) {
   var delta = opt.e.deltaY;
@@ -89,3 +89,31 @@ canvas.on('mouse:wheel', function(opt) {
   opt.e.preventDefault();
   opt.e.stopPropagation();
 });
+
+// Zoom in slider // canvas div zoom in/out 
+
+const slider = document.querySelector('.slider');
+const output = document.querySelector('.slider_value');
+
+
+var canvas_container = document.querySelector('.canvas_container');
+
+output.innerHTML = `${Math.round(slider.value*100)}%`;
+
+slider.oninput = function() {
+    output.innerHTML = `${Math.round(this.value*100)}%`;
+
+    zoomlevel = slider.valueAsNumber;
+    canvas_container.style.webkitTransform = "scale("+zoomlevel+")";
+    canvas_container.style.transform = "scale("+zoomlevel+")";
+}
+
+
+
+
+
+function zoomInOut(){ 
+    console.log('something happened');
+    
+}
+
